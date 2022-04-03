@@ -13,6 +13,7 @@ body {
 }
 
 .container {
+  position: relative;
   padding: 64px 24px;
   filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
 }
@@ -20,6 +21,7 @@ body {
 .container__inner {
   display: flex;
   margin: 0 auto;
+  position: relative;
   max-width: 960px;
   align-items: center;
   flex-direction: column;
@@ -42,9 +44,21 @@ body {
 }
 
 .intro__content p {
-  max-width: 600px;
-  line-height: 1.5;
+  max-width: 640px;
+  line-height: 1.6;
   margin: 0 auto;
+}
+
+.intro__content p+p {
+  margin-top: 24px;
+}
+
+.intro__content a {
+  color: white;
+  font-size: inherit;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 3px;
+  text-decoration-color: orange;
 }
 
 .intro__image img {
@@ -147,4 +161,64 @@ body {
   display: inline-block;
   position: relative;
   color: white;
+}
+
+/* INTRO ANIMATION */
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+.cube {
+  z-index: -1;
+  position: absolute;
+  top: 80%;
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  border: solid 1px orange;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 12s ease-in forwards infinite;
+}
+
+.cube:nth-child(2n) {
+  border-color: orange;
+}
+
+.cube:nth-child(2) {
+  animation-delay: 2s;
+  left: 15%;
+  top: 40%;
+}
+
+.cube:nth-child(3) {
+  animation-delay: 4s;
+  left: 75%;
+  top: 50%;
+}
+
+.cube:nth-child(4) {
+  animation-delay: 6s;
+  left: 90%;
+  top: 10%;
+}
+
+.cube:nth-child(5) {
+  animation-delay: 8s;
+  left: 10%;
+  top: 85%;
+}
+
+.cube:nth-child(6) {
+  animation-delay: 10s;
+  left: 70%;
+  top: 10%;
 }
