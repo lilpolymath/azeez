@@ -1,0 +1,150 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  padding: 64px 24px;
+  filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
+}
+
+.container__inner {
+  display: flex;
+  margin: 0 auto;
+  max-width: 960px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro {
+  background: #0b0d12;
+}
+
+.intro__content {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.intro__content h1 {
+  line-height: 1.2;
+  margin-bottom: 24px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.intro__content p {
+  max-width: 600px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+.intro__image img {
+  width: 160px;
+  height: 100%;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.works__container {
+  margin: auto;
+  max-width: 960px;
+}
+
+.works__content+.works__content {
+  margin: 64px 0;
+}
+
+.works__content h2 {
+  padding: 16px 24px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Rubik Wet Paint', cursive;
+}
+
+.works__items {
+  gap: 48px 32px;
+  display: grid;
+  margin-top: 32px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.works__item {
+  width: 100%;
+  display: flex;
+  min-height: 300px;
+  position: relative;
+  padding: 32px 24px;
+  background: #0b0d12;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.works__item__content {
+  margin-bottom: 20px;
+}
+
+.works__item__content>*+* {
+  margin-top: 20px;
+}
+
+.works__item ul {
+  padding-left: 16px;
+}
+
+.works__item ul li+li {
+  margin-top: 12px;
+}
+
+.works__item a {
+  color: white;
+}
+
+.works__item ul li::marker {
+  color: orange;
+  font-size: 1.5em;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  margin-top: 32px;
+}
+
+.outer {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.outer::before {
+  left: 0px;
+  width: 100%;
+  bottom: 0px;
+  content: "";
+  height: 2px;
+  display: block;
+  position: absolute;
+  background: orange;
+  transition: all 0.3s;
+}
+
+.outer:hover::before {
+  left: 8px;
+  height: 10px;
+}
+
+.inner {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
