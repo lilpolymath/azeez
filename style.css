@@ -14,7 +14,7 @@ body {
 
 .container {
   position: relative;
-  padding: 64px 24px;
+  padding: 80px 24px;
   filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
 }
 
@@ -44,9 +44,9 @@ body {
 }
 
 .intro__content p {
+  margin: 0 auto;
   max-width: 640px;
   line-height: 1.6;
-  margin: 0 auto;
 }
 
 .intro__content p+p {
@@ -62,11 +62,12 @@ body {
 }
 
 .intro__image img {
-  width: 160px;
-  height: 100%;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   overflow: hidden;
+  object-fit: cover;
   border-radius: 50%;
+  object-position: bottom center;
 }
 
 .works__container {
